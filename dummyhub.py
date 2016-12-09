@@ -20,7 +20,7 @@ def contents():
     d = []
     d.append({'name' : "q1.rq"})
 
-    return flask.jsonify(**d) 
+    return flask.jsonify(d) 
 
 if __name__ == "__main__":
     app.run(port=8089, debug=True)
