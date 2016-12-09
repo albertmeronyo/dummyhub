@@ -1,5 +1,6 @@
 import flask
 import json
+import os
 
 app = flask.Flask(__name__)
 
@@ -20,7 +21,8 @@ def dummyapi():
 @app.route("/repos/albertmeronyo/sp2b-queries/contents")
 def contents():
     d = []
-    d.append({'name' : "q1.rq"})
+    for f in os.listdir('static/albertmeronyo/sp2b-queries/')
+        d.append({'name' : f)
 
     return json.dumps(d)
 
