@@ -21,7 +21,7 @@ def dummyapi():
 @app.route("/repos/albertmeronyo/sp2b-queries/contents")
 def contents():
     d = []
-    for f in os.listdir('static/albertmeronyo/sp2b-queries/')
+    for f in os.listdir('static/albertmeronyo/sp2b-queries/'):
         d.append({'name' : f)
 
     return json.dumps(d)
