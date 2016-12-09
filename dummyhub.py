@@ -24,7 +24,7 @@ def contents():
 
     return json.dumps(d)
 
-@app.route("/raw/albertmeronyo/sp2b-queries/master/<file>")
+@app.route("/raw/albertmeronyo/sp2b-queries/master/<filename>")
 def raw(filename):
     return app.send_static_file('albertmeronyo/sp2b-queries/' + filename)
 
