@@ -1,4 +1,6 @@
 import flask
+import json
+
 app = flask.Flask(__name__)
 
 @app.route("/")
@@ -20,7 +22,7 @@ def contents():
     d = []
     d.append({'name' : "q1.rq"})
 
-    return flask.jsonify(d) 
+    return json.dumps(d) 
 
 if __name__ == "__main__":
     app.run(port=8089, debug=True)
