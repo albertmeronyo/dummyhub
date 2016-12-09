@@ -24,5 +24,9 @@ def contents():
 
     return json.dumps(d)
 
+@app.route("/raw/albertmeronyo/sp2b-queries/master/<file>")
+def raw(filename):
+    return app.send_static_file('albertmeronyo/sp2b-queries/' + filename)
+
 if __name__ == "__main__":
     app.run(port=8089, debug=True)
