@@ -22,7 +22,7 @@ def dummyapi():
 def contents():
     d = []
     for f in os.listdir('static/albertmeronyo/sp2b-queries/'):
-        d.append({'name' : f)
+        d.append({'name' : f})
 
     return json.dumps(d)
 
