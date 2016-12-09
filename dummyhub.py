@@ -5,7 +5,7 @@ app = flask.Flask(__name__)
 def dummyhub():
     return "DummyHub here! Try other routes, like /albertmeronyo/lodapi or /contents"
 
-@app.route("/albertmeronyo/lodapi")
+@app.route("/repos/albertmeronyo/lodapi")
 def dummyapi():
     d = {}
     d['name'] = "DUMMY API"
