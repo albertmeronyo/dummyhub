@@ -1,5 +1,5 @@
-from flask import Flask
-app = Flask(__name__)
+import flask
+app = flask.Flask(__name__)
 
 @app.route("/")
 def dummyhub():
@@ -13,7 +13,7 @@ def dummyapi():
     d['owner']['login'] = "albertmeronyo (DUMMY)"
     d['owner']['html_url'] = "http://dummy/url"
 
-    return flask.jsonify(**d) 
+    return flask.jsonify(**d)
 
 if __name__ == "__main__":
     app.run(port=8089, debug=True)
