@@ -27,7 +27,7 @@ def contents(user, repo):
     return json.dumps(d)
 
 @app.route("/raw/<user>/<repo>/master/<filename>")
-def raw(filename):
+def raw(user, repo, filename):
     return app.send_static_file('{}/{}/'.format(user, repo) + filename)
 
 if __name__ == "__main__":
